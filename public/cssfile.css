@@ -76,11 +76,55 @@ header.sticky {
   padding: 5px 100px;
   background: #fff;
 }
+
 header.sticky .logo,
 header.sticky ul li a {
   color: #000;
 }
+.menu-toggle {
+  color: #fff;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 991px) {
+  header {
+    padding: 0 20px;
+  }
+  header.sticky {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    position: absolute;
+    background: #333;
+    width: 100%;
+    height: calc(100vh-50px);
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  .active {
+    left: 0;
+  }
 
+  header.sticky ul li a {
+    color: white;
+  }
+
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+}
+
+header.sticky .menu-toggle {
+  color: #000;
+}
 .viewbuttons {
   padding: 10px;
   font-size: 1em;

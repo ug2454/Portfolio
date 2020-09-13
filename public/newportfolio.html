@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -39,12 +40,24 @@
 <body>
 
     <header>
-        <a href="#" class="logo">Uday</a>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact-us">Contact</a></li>
-        </ul>
+        <a class="logo">Uday</a>
+        <nav class="active">
+            <ul>
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("button").click(function () {
+                    console.log('clicked');
+                    $('nav').toggleClass('active');
+                    console.log('clicked');
+                });
+            });
+        </script>
     </header>
 
 
@@ -354,6 +367,7 @@
     <footer style="text-align: center;color: white;background-color: #112d42;">Made by Uday</footer>
 
 
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -363,6 +377,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+
+
 </body>
 
 <script>
@@ -371,5 +388,7 @@
         interval: 5000,
     });
 </script>
+
+
 
 </html>
