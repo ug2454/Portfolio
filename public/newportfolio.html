@@ -41,11 +41,11 @@
 
     <header>
         <a class="logo">Uday</a>
-        <nav class="active">
+        <nav>
             <ul>
                 <li><a href="#about" class="active">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact-us">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
@@ -62,9 +62,7 @@
 
 
 
-    <section id="about" class="about-me">
 
-    </section>
     <script type="text/javascript">
         window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
@@ -72,6 +70,49 @@
             header.classList.toggle('sticky', window.scrollY > 0);
         })
     </script>
+
+    <section id="about" style="margin-top: 150px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-img">
+                        <!-- <img class="shape" src="/public/about_tringle.png" alt="triangle pic"> -->
+                        <img class="man" src="/public/uday1.jpg" alt="my portrait">
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-7 about-right">
+                    <h2 class="color-3"><b>About Me</b></h2>
+                    <p class="p-first text-white">
+                        I am a technology enthusiast, and love creative and innovation driven ideas. Technology is both
+                        my professional day to day and an area of endless fascination and learning for me. I wake up
+                        everyday wanting to learn something new and change the world.
+                    </p>
+                    <p class="text-white">
+                        Experienced with technologies like HTML, CSS, Javascript, Flutter, BDD Cucumber,
+                        Selenium Webdriver Automation, Core Java, Cucumber Framework.
+
+                    </p>
+                    <p class="text-white">Currently developing a project using Flutter, Firebase, Dialogue Flow and
+                        Google Actions.</p>
+                    <p class="text-white">In my spare time when I am not busy programming I am a reader and follower of
+                        Shri Bhagavad Gita. I also like to write journal in my free time, listen to english and japanese
+                        music. I am an athlete and love to play various sports like basketball, badminton, table tennis.
+                    </p>
+                    <h3 class="color-3 social-link-text">
+                        <button class="btn btn-danger">Hire Me</button>
+                    </h3>
+                    <ul class="about-link">
+                        <li><a href="https://github.com/ug2454" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/uday11garg/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://twitter.com/TheRealMecazor" target="_blank"><i
+                                    class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- <section class="about-me">
 
@@ -141,7 +182,7 @@
                 <!-- Slide One - Set the background image for this slide in the line below -->
                 <div class="carousel-item active">
                     <!--Photo by Pok Rie from Pexels-->
-                    <h1 style="text-align: center;margin-top: 200px;">Projects</h1>
+                    <h1 style="text-align: center;margin-top: 150px;">Projects</h1>
                     <div
                         style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
                         <img style="width: 20%;height:80%;"
@@ -186,7 +227,7 @@
 
                 <!-- Slide Two - Set the background image for this slide in the line below -->
                 <div class="carousel-item">
-                    <h1 style="text-align: center;margin-top: 200px;">Projects</h1>
+                    <h1 style="text-align: center;margin-top: 150px;">Projects</h1>
                     <div
                         style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
                         <img style="width: 20%;height:80%;"
@@ -228,7 +269,7 @@
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
                 <div class="carousel-item">
-                    <h1 style="text-align: center;margin-top: 200px;">Projects</h1>
+                    <h1 style="text-align: center;margin-top: 150px;">Projects</h1>
                     <div
                         style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
                         <img style="width: 20%;height:80%;"
@@ -292,6 +333,51 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="contact-form-process.php" method="post" name="form">
+                <div class="row100">
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="text" id="Name" name="Name" required>
+                            <span class="text">Name</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="inputBox">
+                            <input type="email" id="Email" name="Email" required>
+                            <span class="text">Email</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row100">
+                    <div class="col">
+                        <div class="inputBox textarea">
+                            <textarea required id="Message" name="Message"></textarea>
+                            <span class="text">Type your message here...</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row100">
+                    <div class="col">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+    </section>
+
+
 
     <!-- <section id="contact-us">
 
@@ -364,7 +450,7 @@
 
     </section> -->
 
-    <footer style="text-align: center;color: white;background-color: #112d42;">Made by Uday</footer>
+    <footer style="text-align: center;color: #fff;background-color: #000;">Made by Uday</footer>
 
 
 

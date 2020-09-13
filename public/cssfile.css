@@ -19,12 +19,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 body {
   background-color: #000000;
   color: #fff;
   font-size: 1.1rem;
+  overflow-x: hidden;
 
   /* min-height: 200vh; */
 }
@@ -93,6 +94,9 @@ header.sticky ul li a {
   header {
     padding: 0 20px;
   }
+  #about h2 {
+    margin-top: 30px;
+  }
   header.sticky {
     padding: 0 20px;
   }
@@ -130,12 +134,75 @@ header.sticky .menu-toggle {
   font-size: 1em;
   background-color: black;
   color: #fff;
+  border: 2px solid white;
 }
 #contact-us {
   display: flex;
   justify-content: center;
   align-content: center;
   min-height: 100vh;
+}
+
+.man {
+  height: 60%;
+  width: 60%;
+}
+
+#about {
+  min-height: 100vh;
+  padding-top: 98px;
+  padding-bottom: 101px;
+}
+
+#about .p-first {
+  margin-bottom: 30px;
+}
+
+#about h2 {
+  margin-bottom: 47px;
+}
+#about .social-link-text {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+#about .about-link {
+  padding-left: 0;
+}
+#about .about-link li {
+  display: inline-block;
+}
+#about .about-link li a i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #fff;
+  margin-right: 10px;
+  font-size: 22px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#about .about-link li a i:hover {
+  color: #222222;
+  background: #fff;
+}
+
+.btn-danger {
+  border-radius: 0;
+  padding: 10px 20px;
+}
+
+#about p {
+  margin-bottom: 0;
+  font-size: 1em;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+#contact-us {
+  width: 100%;
 }
 
 #contact-us::before {
@@ -364,26 +431,6 @@ header.sticky .menu-toggle {
   cursor: pointer;
 }
 
-@font-face {
-  font-family: Poppins-Regular;
-  src: url("../fonts/poppins/Poppins-Regular.ttf");
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url("../fonts/poppins/Poppins-Medium.ttf");
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url("../fonts/poppins/Poppins-Bold.ttf");
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
-}
-
 .carousel-item {
   height: 100vh;
   min-height: 350px;
@@ -435,7 +482,6 @@ header.sticky .menu-toggle {
 }
 
 a {
-  font-family: Poppins-Regular;
   font-size: 20px;
   line-height: 1.7;
   color: #666666;
@@ -462,11 +508,9 @@ h4,
 h5,
 h6 {
   margin: 0px;
-  font-family: Poppins-Regular;
 }
 
 p {
-  font-family: Poppins-Regular;
   font-size: 19px;
   line-height: 1.7;
   color: #666666;
@@ -507,5 +551,166 @@ iframe {
   border: none !important;
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ Contact ]*/
+#contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-div {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  /* align-items: center; */
+  align-content: center;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+}
+
+.container h2 {
+  width: 100%;
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.container .row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px), 1fr);
+}
+.container .row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+.container .row100 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+}
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+.container .row100 .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line {
+  height: 100%;
+}
+
+.container .row100 .inputBox.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line {
+  height: 100%;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+input[type="submit"]:hover {
+  color: #00acee;
+}
+
+.cursor,
+.follow {
+  position: absolute;
+  pointer-events: none;
+  width: 0.4em;
+  height: 0.4em;
+  transform: translate(-50%, -50%);
+}
+.cursor {
+  background: #fff;
+  border-radius: 50%;
+}
+
+.follow {
+  padding: 2rem;
+  border: 0.1rem solid #fff;
+  transition: all 0.2s ease-out;
+  border-radius: 100%;
+}
+
+.follow.on-focus {
+  transform: translate(-0.55rem, -0.55rem);
+  border: 0.1rem solid #fff;
+  border-radius: 0%;
+  padding: 0.46rem;
+}

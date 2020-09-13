@@ -16,10 +16,8 @@ if (isset($_POST['Email'])) {
 
     // validation expected data exists
     if (
-        !isset($_POST['Name']) ||
-        !isset($_POST['LastName'])||
-        !isset($_POST['Email']) ||
-        !isset($_POST['Mobile']) ||
+        !isset($_POST['Name']) ||        
+        !isset($_POST['Email']) ||        
         !isset($_POST['Message'])
         
     ) {
@@ -29,8 +27,6 @@ if (isset($_POST['Email'])) {
     $name = $_POST['Name']; // required
     $email = $_POST['Email']; // required
     $message = $_POST['Message']; // required
-    $lastname=$_POST['LastName'];
-    $mobile=$_POST['Mobile'];
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
@@ -63,8 +59,7 @@ if (isset($_POST['Email'])) {
     $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
-    $email_message .= "LastName: " . clean_string($lastname) . "\n";
-    $email_message .= "Mobile: " . clean_string($mobile) . "\n";
+   
 
     // create email headers
     $headers = 'From: ' . $email . "\r\n" .
