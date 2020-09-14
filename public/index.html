@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -38,17 +39,78 @@
 
 <body>
 
-  <!-- <header>
-   <a href="#" class="logo">Uday</a>
-   <ul>
-     <li><a href="#">About</a></li>
-     <li><a href="#">Projects</a></li>
-     <li><a href="#">Contact</a></li>
-   </ul>
- </header> -->
+  <header>
+    <a class="logo">Uday</a>
+    <nav>
+      <ul>
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("button").click(function () {
+          console.log('clicked');
+          $('nav').toggleClass('active');
+          console.log('clicked');
+        });
+      });
+    </script>
+  </header>
 
-  <section class="about-me">
 
+
+
+  <script type="text/javascript">
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('header');
+
+      header.classList.toggle('sticky', window.scrollY > 0);
+    })
+  </script>
+
+  <section id="about" style="margin-top: 150px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="about-img">
+            <!-- <img class="shape" src="/public/about_tringle.png" alt="triangle pic"> -->
+            <img class="man" src="uday1.jpg" alt="my portrait">
+          </div>
+        </div>
+        <br>
+        <div class="col-md-7 about-right">
+          <h2 class="color-3"><b>About Me</b></h2>
+          <p class="p-first text-white">
+            I am a technology enthusiast, and love creative and innovation driven ideas. Technology is both
+            my professional day to day and an area of endless fascination and learning for me. I wake up
+            everyday wanting to learn something new and change the world.
+          </p>
+          <p class="text-white">
+            Experienced with technologies like HTML, CSS, Javascript, Flutter, BDD Cucumber,
+            Selenium Webdriver Automation, Core Java, Cucumber Framework.
+
+          </p>
+          <p class="text-white">Currently developing a project using Flutter, Firebase, Dialogue Flow and
+            Google Actions.</p>
+          <p class="text-white">In my spare time when I am not busy programming I am a reader and follower of
+            Shri Bhagavad Gita. I also like to write journal in my free time, listen to english and japanese
+            music. I am an athlete and love to play various sports like basketball, badminton, table tennis.
+          </p>
+          <h3 class="color-3 social-link-text">
+            <button class="btn btn-danger">Hire Me</button>
+          </h3>
+          <ul class="about-link">
+            <li><a href="https://github.com/ug2454" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/uday11garg/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li><a href="https://twitter.com/TheRealMecazor" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- <section class="about-me">
@@ -108,7 +170,8 @@
 
 
 
-  <header id="projects">
+  <section id="projects">
+    <h1 style="margin-top: 100px;text-align: center;">Projects</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -119,7 +182,7 @@
         <!-- Slide One - Set the background image for this slide in the line below -->
         <div class="carousel-item active">
           <!--Photo by Pok Rie from Pexels-->
-          <h1 style="text-align: center;">Projects</h1>
+
           <div
             style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
             <img style="width: 20%;height:80%;"
@@ -162,7 +225,7 @@
 
         <!-- Slide Two - Set the background image for this slide in the line below -->
         <div class="carousel-item">
-          <h1 style="text-align: center;">Projects</h1>
+
           <div
             style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
             <img style="width: 20%;height:80%;"
@@ -201,7 +264,7 @@
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
         <div class="carousel-item">
-          <h1 style="text-align: center;font-family: 'Poppins';">Projects</h1>
+
           <div
             style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
             <img style="width: 20%;height:80%;"
@@ -240,6 +303,78 @@
             </div>
           </div>
         </div>
+        <div class="carousel-item">
+
+          <div
+            style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
+            <img style="width: 20%;height:80%;"
+              src="https://cdn.discordapp.com/attachments/748749812303659069/748813557264678952/Screenshot_20200828-132717.jpg"
+              alt="projectimage">
+            <div style="max-width: 500px;display: flex;justify-content: space-evenly;flex-direction: column;">
+              <h1 style="font-family: 'Pacifico', cursive;">Video Sharing App UI</h1>
+              <h3>About this app:</h3>
+              <p>A flutter app for video sharing. Upload and share videos with your contacts. </p>
+              <h4>What is used in this project</h4>
+              <ul>
+                <li>List View builder</li>
+                <br>
+                <li>Dart classes and objects.</li>
+                <br>
+                <li>Extracting Widgets to refactor code.</li>
+                <br>
+                <li>Private and public modifiers in Dart.</li>
+                <br>
+                <li>Custom Widgets</li>
+
+              </ul>
+              <div style="text-align: center;">
+                <a style="border: none;" href="https://github.com/ug2454/LustyLab" target="_blank"
+                  referrerpolicy="no-referrer">
+                  <button class="viewbuttons"><i style="font-size: 30px;" class="fab fa-github fa-sm"></i>
+                    View
+                    in
+                    Github</button>
+
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+
+          <div
+            style="position: absolute;top: 10%;left: 10%;display: flex;flex-direction: row;justify-content: space-evenly;">
+            <img style="width: 20%;height:80%;"
+              src="https://cdn.discordapp.com/attachments/745289010024546355/754744225186185236/Screenshot_20200913-220952.jpg"
+              alt="projectimage">
+            <div style="max-width: 500px;display: flex;justify-content: space-evenly;flex-direction: column;">
+              <h1 style="font-family: 'Pacifico', cursive;">Smile Detection App</h1>
+              <h3>About this app:</h3>
+              <p>A face detection app using Firebase ML Kit made with Flutter.</p>
+              <h4>What is used in this project</h4>
+              <ul>
+                <li>Custom Painter</li>
+                <br>
+                <li>Firebase ML Vision and Image Picker package</li>
+                <br>
+                <li>Dart Lists</li>
+                <br>
+                <li>Firebase Vision to configure face detection parameters</li>
+
+              </ul>
+              <div style="text-align: center;">
+                <a style="border: none;" href="https://github.com/ug2454/FaceDetectionFlutter" target="_blank"
+                  referrerpolicy="no-referrer">
+                  <button class="viewbuttons"><i style="font-size: 30px;" class="fab fa-github fa-sm"></i>
+                    View
+                    in
+                    Github</button>
+
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #00acee;"></span>
@@ -250,11 +385,9 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  </header>
-
-  <section>
-
   </section>
+
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -266,82 +399,124 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-  <section id="contact-us">
 
+  <section id="contact">
     <div class="container">
-      <div class="contactinfo">
-        <h2>Contact Info</h2>
-        <ul class="info">
-          <li>
-            <span><i class="fas fa-map-marker-alt"></i></span>
-            <span>Noida<br>
-              Uttar Pradesh, India</span>
-
-          </li>
-          <li>
-            <span><i class="fas fa-envelope-open"></i></span>
-            <span>u.garg14@gmail.com</span>
-          </li>
-          <li>
-            <span><i class="fas fa-mobile-alt"></i></span>
-            <span>8800579050</span>
-          </li>
-        </ul>
-        <ul class="sci">
-          <li><a href="https://github.com/ug2454/" target="_blank"><i style="color: black;  font-size: 25px;"
-                class="fab fa-github"></i></a></li>
-          <li><a href="https://twitter.com/TheRealMecazor" target="_blank"><i style="color: black;  font-size: 25px;"
-                class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/uday11garg/" target="_blank"><i
-                style="color: black;  font-size: 25px;" class="fab fa-linkedin"></i></a></li>
-
-
-        </ul>
-      </div>
-
-      <div class="contactForm ">
-        <h2>Send a Message</h2>
-        <form action="contact-form-process.php" method="post" name="form">
-          <div class="formBox">
-            <div class="inputBox w50">
+      <h2>Contact Us</h2>
+      <form action="contact-form-process.php" method="post" name="form">
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox">
               <input type="text" id="Name" name="Name" required>
-              <span>First Name</span>
-            </div>
-            <div class="inputBox w50">
-              <input type="text" id="LastName" name="LastName" required>
-              <span>Last Name</span>
-            </div>
-            <div class="inputBox w50">
-              <input type="email" id="Email" name="Email" required>
-              <span>Email Address</span>
-            </div>
-            <div class="inputBox w50">
-              <input type="text" id="Mobile" name="Mobile" required>
-              <span>Mobile Number</span>
-            </div>
-            <div class="inputBox w100">
-              <textarea id="Message" name="Message" required></textarea>
-              <span>Write your message here...</span>
-            </div>
-            <div class="inputBox w100">
-              <input type="submit" value="Send">
+              <span class="text">Name</span>
+              <span class="line"></span>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="col">
+            <div class="inputBox">
+              <input type="email" id="Email" name="Email" required>
+              <span class="text">Email</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row100">
+          <div class="col">
+            <div class="inputBox textarea">
+              <textarea required id="Message" name="Message"></textarea>
+              <span class="text">Type your message here...</span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row100">
+          <div class="col">
+            <input type="submit" value="Send">
+          </div>
+        </div>
+      </form>
+
+
     </div>
-
-
-
-    <div id="dropDownSelect1"></div>
-
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
   </section>
 
-  <footer style="text-align: center;color: white;background-color: #112d42;">Made by Uday</footer>
+
+
+  <!-- <section id="contact-us">
+
+        <div class="container">
+            <div class="contactinfo">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Noida<br>
+                            Uttar Pradesh, India</span>
+
+                    </li>
+                    <li>
+                        <span><i class="fas fa-envelope-open"></i></span>
+                        <span>u.garg14@gmail.com</span>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-mobile-alt"></i></span>
+                        <span>8800579050</span>
+                    </li>
+                </ul>
+                <ul class="sci">
+                    <li><a href="https://github.com/ug2454/" target="_blank"><i style="color: black;  font-size: 25px;"
+                                class="fab fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/TheRealMecazor" target="_blank"><i
+                                style="color: black;  font-size: 25px;" class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uday11garg/" target="_blank"><i
+                                style="color: black;  font-size: 25px;" class="fab fa-linkedin"></i></a></li>
+
+
+                </ul>
+            </div>
+
+            <div class="contactForm ">
+                <h2>Send a Message</h2>
+                <form action="contact-form-process.php" method="post" name="form">
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" id="Name" name="Name" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" id="LastName" name="LastName" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" id="Email" name="Email" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" id="Mobile" name="Mobile" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea id="Message" name="Message" required></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div id="dropDownSelect1"></div>
+
+    </section> -->
+
+  <footer style="text-align: center;color: #fff;background-color: #000;">Made by Uday</footer>
+
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -353,6 +528,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+
+
 </body>
 
 <script>
@@ -361,5 +539,7 @@
     interval: 5000,
   });
 </script>
+
+
 
 </html>

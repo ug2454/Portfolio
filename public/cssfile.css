@@ -501,17 +501,23 @@ a:hover {
 }
 
 /*---------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   margin: 0px;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin: 0px;
+  font-size: 1.3em;
+}
+h4{
+  margin: 0px;
+  font-size: 1.1em;
+}
 }
 
 p {
-  font-size: 19px;
+  font-size: 0.8em;
   line-height: 1.7;
   color: #666666;
   margin: 0px;
@@ -677,40 +683,9 @@ input[type="submit"] {
   padding: 7px 35px;
   cursor: pointer;
   outline: none;
-  background: transparent;
-  color: #fff;
+  background: #fff;
+  color: #000;
   font-size: 18px;
   border-radius: 2px;
   text-decoration: none;
-}
-
-input[type="submit"]:hover {
-  color: #00acee;
-}
-
-.cursor,
-.follow {
-  position: absolute;
-  pointer-events: none;
-  width: 0.4em;
-  height: 0.4em;
-  transform: translate(-50%, -50%);
-}
-.cursor {
-  background: #fff;
-  border-radius: 50%;
-}
-
-.follow {
-  padding: 2rem;
-  border: 0.1rem solid #fff;
-  transition: all 0.2s ease-out;
-  border-radius: 100%;
-}
-
-.follow.on-focus {
-  transform: translate(-0.55rem, -0.55rem);
-  border: 0.1rem solid #fff;
-  border-radius: 0%;
-  padding: 0.46rem;
 }
